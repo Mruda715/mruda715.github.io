@@ -1,5 +1,164 @@
-*{
-    padding: 0;
+/* *{ outline: 1px;
+    border: green dotted 2px;
     margin: 0;
-    box-sizing: border-box;
-    }
+    padding:0;
+  } */
+
+.container {
+  margin-right:3em;
+  min-width:100%;
+  height:100vh;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "icon"
+    "nav"
+    "portrait"
+    "content"
+    "footer";
+  }
+    
+.icon{
+    grid-area: icon;
+  }
+
+.content{
+    grid-area: content;
+  }
+
+.footer{
+    grid-area: footer;
+  }
+
+nav {
+    text-align: center;
+    grid-area: nav;
+    padding-right: 25px;
+    font-size: 2pt;
+    padding-bottom: 30pt;
+  }
+
+nav ul{
+    list-style-type: none;
+  } 
+
+img {
+    width: 480px;
+    grid-area: content;
+  }
+
+body{
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+svg {
+    transform: scale(.50);
+  }
+
+li {
+    display: inline;
+    padding: 25px;
+    font-size: 2em;
+  }
+
+p {
+  margin-top:0;
+  font-weight: 300;
+  }
+
+a:link {
+    text-decoration: none;
+    color: rgb(157, 219, 241);
+  }
+    
+a:visited {
+    text-decoration: none;
+    color: rgb(157, 219, 241);
+  } 
+  
+a:hover {
+    text-decoration: none;
+    color: black;
+  }
+    
+a:active {
+    text-decoration: none;
+  }
+/* EFFECTS */
+a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 0px;
+    position: relative;
+    font-weight: 400;
+    font-size: 17px;
+  }
+  
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  
+a:hover:after{ 
+    width: 100%; 
+    left: 0;
+}
+
+@media (min-width: 1040px) {
+  .container{
+      width:100%;
+      height: 100vh;
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+          "icon icon nav"
+          "portrait portrait portrait"
+          "content content content"
+          "footer footer footer";
+      } 
+
+img {
+  width: 900px;
+  grid-area: content;
+  padding-left: 375px;
+}
+
+.icon{
+  grid-area: icon;
+  width: 300px;
+  padding-left: 350px;
+}
+    
+.content{
+  grid-area: content;
+  margin-left: 500px;
+  margin-right: 550px;
+  text-align: left;
+  column-count: 2;
+}
+    
+.footer{
+  grid-area: footer;
+  padding-left: 550px;
+}
+    
+nav {
+  text-align: center;
+  grid-area: nav;
+  padding-top: 150px;
+  padding-right: 390px;
+  }
+}
