@@ -237,15 +237,16 @@ h1{
     text-align: left;
   }
       
-  .footer{
-    grid-area: footer;
-    padding-left: 550px;
-  }
-      
   nav {
     text-align: center;
     grid-area: nav;
     padding-top: 150px;
     padding-right: 390px;
     }
+
+    .footer{
+      grid-area: footer;
+      text-align: center;
+    }
+
   }

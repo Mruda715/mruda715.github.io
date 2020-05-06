@@ -25,6 +25,8 @@
 
 .content{
     grid-area: content;
+    padding-left: 15pt;
+    padding-right: 15pt;
   }
 
 .footer{
@@ -44,8 +46,9 @@ nav ul{
   } 
 
 img {
-    width: 480px;
+    width: 470px;
     grid-area: content;
+    padding-left: 5pt;
   }
 
 body{
@@ -98,18 +101,7 @@ a {
     font-weight: 400;
     font-size: 17px;
   }
-  
-a:after {    
-    background: none repeat scroll 0 0 transparent;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: black;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
+
   
 a:hover:after{ 
     width: 100%; 
@@ -144,8 +136,8 @@ img {
     
 .content{
   grid-area: content;
-  margin-left: 500px;
-  margin-right: 550px;
+  margin-left: 485px;
+  margin-right: 485px;
   text-align: left;
   column-count: 2;
 }
